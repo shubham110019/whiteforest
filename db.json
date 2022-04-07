@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "title": "shubham ralli",
+      "author": "react",
+      "id": 1
+    },
+    {
+      "title": "hemant parsad",
+      "author": "data entry",
+      "id": 2
+    },
+    {
+      "title": "shubham",
+      "author": "govind puri",
+      "id": 3
+    },
+    {
+      "title": "hemant",
+      "author": "gk",
+      "id": 4
+    },
+    {
+      "title": "ralli",
+      "author": "data",
+      "id": 5
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
