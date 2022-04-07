@@ -1,5 +1,5 @@
-import React from 'react';
-import logo from '../img/SB_Logo.png';
+
+import logo from '../assets/img/SB_Logo.png';
 function Footer(){
     return(
         <>
@@ -7,7 +7,7 @@ function Footer(){
 <div className="container">
 <div className="row">
 <div className="col-lg-5">
-<div className="footer-info p-right-45 m-bottom-40"> <img src={logo} alt="footer-logo" width="173" height="40" />
+<div className="footer-info p-right-45 m-bottom-40"> <img src={logo} alt="footer-logo" width="173" height="65" />
 <p className="m-top-20">An orci nullam tempor sapien, eget gravida integer donec ipsum porta justo at odio integer congue orci magna undo auctor gravida velna magna lacus odio ac risus auctor tempus dolor feugiat</p>
 </div>
 </div>

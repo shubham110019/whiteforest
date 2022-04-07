@@ -1,15 +1,23 @@
+import React,{useState,useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../img/SB_Logo.png';
+import logo from '../assets/img/SB_Logo.png';
 function Navbar(){
+	const [scroll, setScroll] = useState(false);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+          setScroll(window.scrollY > 50);
+        });
+      }, []);
+
     return(
         <>
         <header id="header" className="header">
-				<nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-tra">
+				<nav className={scroll ? "navbar fixed-top navbar-expand-lg navbar-dark bg-tra scroll" : "navbar fixed-top navbar-expand-lg navbar-dark bg-tra"}>
 					<div className="container">
 
 
-				 		<a href="#hero-10" className="navbar-brand logo-white"><img src={logo} width="150" height="60" alt="header-logo"/></a>
-				 		<a href="#hero-10" className="navbar-brand logo-black"><img src={logo} width="150" height="60" alt="header-logo"/></a>
+				 		<Link to="/" className="navbar-brand logo-white"><img src={logo} width="150" height="60" alt="header-logo"/></Link>
+				 		<Link to="/" className="navbar-brand logo-black"><img src={logo} width="150" height="60" alt="header-logo"/></Link>
 
 
 				 
@@ -23,24 +31,23 @@ function Navbar(){
 					   		<ul className="navbar-nav ml-auto">
 			      		
 			      			
-					      		<li className="nav-item dropdown">
+							   <li className="nav-item nl-simple"><Link className="nav-link" to="/">Home</Link></li>
+					      		<li className="nav-item nl-simple"><Link className="nav-link" to="/about">About Us</Link></li>
+								  <li className="nav-item dropdown">
 							        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							          About
+							           Services 
 							        </a>
 							        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-							        	<a className="dropdown-item" href="#features-2">Features</a>
-							        	<a className="dropdown-item" href="#content-2">Why MobiCom</a>
-							        	<a className="dropdown-item" href="#team-1">Our Team</a>
-							         	<a className="dropdown-item" href="#video-4">How It Works</a>
-							         	<a className="dropdown-item" href="#reviews-2">Reviews</a>
-							          	<div className="dropdown-divider"></div>
-							         	<a className="dropdown-item" href="#press-1">Press About Us</a>
+							        	<Link className="dropdown-item" to="#features-2">Speed Reading</Link>
+							        	<Link className="dropdown-item" to="#content-2">Memorizing Names</Link>
+							        	<Link className="dropdown-item" to="#team-1">Remembering Numbers</Link>
+							         	<Link className="dropdown-item" to="#video-4">Memorizing Dates</Link>
+							         	<Link className="dropdown-item" to="#reviews-2">Memory Sports</Link>
 							        </div>
 							    </li>
 
-					      		<li className="nav-item nl-simple"><a className="nav-link" href="#screens-1">Screens</a></li>
-					      		<li className="nav-item nl-simple"><a className="nav-link pre-link" href="#pricing-1">Go Premium<span></span></a></li>
-					      		<li className="nav-item nl-simple"><a className="nav-link" href="#faqs-1">FAQs</a></li>					      		
+					      		<li className="nav-item nl-simple"><Link className="nav-link pre-link" to="/blogs">Blogs</Link></li>
+					      		<li className="nav-item nl-simple"><Link className="nav-link" to="/Contact-Us">Contact us</Link></li>					      		
 
 						
 

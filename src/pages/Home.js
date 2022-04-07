@@ -74,16 +74,25 @@ function Home()
 			 		<div class="row">
 
 
-						<div class="col-md-6 col-lg-3 ">
+						<div class="col-md-6 col-lg-4 ">
 							<div class="fbox-2 box-icon-lg green-icon">
-								
-							
 								<span class="pe-7s-piggy"></span>
-			
-								<h5 class="h5-md">Super Affordable</h5>	
+								<h5 class="h5-md">MISPLACE YOUR THINGS VERY OFTEN</h5>	
+							</div>							
+						</div>
 
-								<p class="grey-color">Semper lacus cursus porta, feugiat primis in ultrice ligula risus auctor tempus</p>
+						<div class="col-md-6 col-lg-4 ">
+							<div class="fbox-2 box-icon-lg green-icon">
+								<span class="pe-7s-piggy"></span>
+								<h5 class="h5-md">WHERE DID I PARK THE CAR</h5>	
+							</div>							
+						</div>
 
+
+						<div class="col-md-6 col-lg-4 ">
+							<div class="fbox-2 box-icon-lg green-icon">
+								<span class="pe-7s-piggy"></span>
+								<h5 class="h5-md">FORGETTING IMPORTANT DATES</h5>	
 							</div>							
 						</div>
 				

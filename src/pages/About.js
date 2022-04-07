@@ -1,114 +1,47 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import Aboutimg from '../assets/img/5437683.png';
 
 function About() {
-    const[title,setTilte]=useState('');
-    const[author,setAuthor]=useState('');
-    const[userid,setUserid]=useState('');
-
-    const [data, setData] = useState();
-
-    const apiData = async () => {
-
-        const apidata = await fetch('http://localhost:3000/posts');
-        setData(await apidata.json());
-
-    }
-
-
-    const deleteapi = async (id) => {
-        try {
-            const apidl = await fetch(`http://localhost:3000/posts/${id}`, {
-                method: 'Delete',
-            });
-            console.log('delete user id' + id);
-            apiData();
-        }
-        catch (error) {
-            console.log(error);
-        }
-
-
-    }
-
-    const editapi = async (id) =>{
-
-        const editapidata = await fetch(`http://localhost:3000/posts/${id}`);
-
-        const editmaindata = await editapidata.json()
-
-        setTilte(editmaindata.title);
-        setAuthor(editmaindata.author);
-        setUserid(id);
-    }
-
-    const editfulldata = async (id) =>{
-        try {
-        const fulleditdata =({title,author});
-        const resp = await fetch(`http://localhost:3000/posts/${id}`,{
-            method:'PUT',
-            headers:{
-                'Content-Type':'application/json'
-            },
-            body: JSON.stringify(fulleditdata)
-        });
-        apiData();
-    } catch(error) {
-        console.log(error);
-       }
-
-    }
-
-    useEffect(() => {
-        apiData();
-    }, [])
-    return (
+    return(
         <>
+            <section id="team-1" class="bg-fixed bg-lightgrey wide-100 team-section division">
+				<div class="container">
 
-            <div className='container'>
-                <div class="row">
-                    <div className='col-md-6 mt-5'>
-                        <table className='table'>
-                            <tr>
-                                <td>Id</td>
-                                <td>Title</td>
-                                <td>Author</td>
-                                <td>Edit</td>
-                                <td>Delete</td>
-                            </tr>
-                            {
-                                data ?
-                                    data.map((result, i) => {
-                                        return (
-                                            <>
-                                                <tr key={i}>
-                                                    <td>{result.id}</td>
-                                                    <td>{result.title}</td>
-                                                    <td>{result.author}</td>
-                                                    <td><button className='btn btn-info btn-sm' onClick={() => { editapi(result.id) }}>Edit</button></td>
-                                                    <td><button className='btn btn-danger btn-sm' onClick={() => { deleteapi(result.id) }}>delete</button></td>
-                                                </tr>
+                <div class="row">	
+						<div class="col-md-10 offset-md-1 section-title">	
+							<h3 class="h2-lg"></h3>	
+							<p>IT’S NOT ABOUT WHAT YOU LEARN,<br/>
+                                IT’S ABOUT HOW YOU LEARN
+							</p>
+										
+						</div> 	 	
+					</div>
 
-                                            </>
-                                        )
-                                    }) : null
-                            }
-                        </table>
-                    </div>
-                    <div className='col-md-6'>
-                    <div class="form-group">
-                            <label for="exampleInputEmail1">Title</label>
-                            <input type="text" class="form-control" value={title} onChange={(e)=>{setTilte(e.target.value)}}/>
-
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Author</label>
-                            <input type="text" class="form-control" value={author} onChange={(e)=>{setAuthor(e.target.value)}}/>
+				 	<div class="row align-items-center" bis_skin_checked="1">
+                        <div class="col-lg-5" >
+                            <img src={Aboutimg} className="img-fluid"/>
                         </div>
 
-                        <button className='btn btn-info' onClick={()=>{editfulldata(userid)}}> Submit</button>
+                        <div class="col-lg-7">
+                        <p>We have been taught to rote learn since time immemorial. Rote method of learning may have been successful in the earlier century but in today’s time, we need a better method.</p>
+
+                        <p>A learning method that is exciting, engaging, and at par with the current time and trends.</p>
+
+                        <p>This is information age; there is information explosion all around us. There is too much to learn but too little time to learn. The only skill that we need right now is the Skill Of Fast And Efficient Learning.</p>
+
+                        <p>WhiteForest is an endeavour dedicated to the forest of 100 billion neurons. An endeavour dedicated to the information super highway of 100 trillion neural connections inside your head. An endeavour dedicated to human brain and brain training.</p>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <h3>Why Brain Training?</h3>
+                            <p>In the last two decades the technology around has changed tremendously. A task that use to take 7 days for completion can now be completed in just 1 day. A task that use to take 24 hours for completion can now be accomplished in just 1 hour. Everything around us has become very fast and there is humungous data, being produced every day.</p>
+
+                            <h3>How much we have upgraded?</h3>
+                            <p>We human beings, in flesh and bone alone, how much have we upgraded to keep up with the fast-paced technology. We have not improved at all. Rather, we are becoming more and more dependent on technology and hardly using our brain. one important fact about the brain is:</p>
+                        </div>
                     </div>
-                    </div></div>
+                </div>
+            </section>
         </>
     )
 
