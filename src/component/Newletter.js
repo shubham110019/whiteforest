@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../img/SB_Logo.png';
+
 function Newletter(){
     return(
         <>

@@ -276,7 +276,7 @@
   .bg-grey { background-color: #e8e8e8 }
   .bg-red { background-color: #e35029; }
   .bg-yellow { background-color: #feca16; }
-  .bg-green { background-color: #42a045; }
+  .bg-green { background-color: #2d65c0; }
   .bg-blue { background-color: #242d4d; }
   .bg-lightblue { background-color: #1e88e5; }
   .bg-purple { background-color: #783bb1; }
@@ -1087,7 +1087,7 @@
   }
   
   .navbar-dark .navbar-nav .nav-link {
-    color: #fff;
+    color: black !important;
   }
   
   .navbar-light .navbar-nav .nav-link {
@@ -1128,7 +1128,7 @@
   .navbar-expand-lg .navbar-nav .nav-link {
     font-size: 1.05rem;
     font-weight: 500;
-    padding: 0.65rem 1.5rem;
+    padding: 10px 15px !important;
     margin-left: 1px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -1392,7 +1392,7 @@
   }
   
   #hero-10 {  
-    background-image: url(./img/hero-10.png);
+    /* background-image: url('../img/hero-10.png'); */
     padding-top: 150px;
     padding-bottom: 100px;
   }
@@ -3091,7 +3091,7 @@
   }
   
   #newsletter-2 {
-    /* background-image: url(../images/tra-bg-2.png); */
+    background-image: url(./assets/img/tra-bg-2.png);
     padding-top: 100px;
     padding-bottom: 100px;
   }

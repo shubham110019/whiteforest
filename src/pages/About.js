@@ -10,9 +10,9 @@ function About() {
                 <div class="row">	
 						<div class="col-md-10 offset-md-1 section-title">	
 							<h3 class="h2-lg"></h3>	
-							<p>IT’S NOT ABOUT WHAT YOU LEARN,<br/>
+							<h2 className='mt-5'>IT’S NOT ABOUT WHAT YOU LEARN,<br/>
                                 IT’S ABOUT HOW YOU LEARN
-							</p>
+							</h2>
 										
 						</div> 	 	
 					</div>
